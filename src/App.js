@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React ,{ Component } from 'react';
+import MapBox from './components/MapBox/MapBox';
+import Card from './components/Card/Card';
+import CardsData from './components/Card/cards.json'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+	constructor() {
+    	super();
+    	this.state = {
+      		data: []
+    	}
+  	}
+
+  	componentDidMount() {
+
+	  this.setState({data: CardsData[0].data})
+  	}
+
+	render() {
+		console.log(this.data)
+	    return (
+	      <div className='rowV'>
+	        <MapBox data={this.state.data}/>
+	        <Card  onButtonClick={this.onButtonClick} />
+	      </div>
+	    );
+  	}
 }
 
 export default App;
