@@ -1,7 +1,7 @@
 import React ,{ Component } from 'react';
 import MapBox from './components/MapBox/MapBox';
 import Card from './components/Card/Card';
-import CardsData from './components/Card/cards.json'
+import CardsData from './cards.json'
 import './App.css';
 
 
@@ -10,21 +10,50 @@ class App extends Component {
 	constructor() {
     	super();
     	this.state = {
-      		data: []
+      		card: [],
+      		index:0
     	}
   	}
 
   	componentDidMount() {
-
-	  this.setState({data: CardsData[0].data})
+	  	this.setState({card: CardsData[this.state.index]})
   	}
+
+
+  	changeCard = (index) => {
+    	this.setState({card: CardsData[index]})
+  	}
+
+  	onButtonClickNext = () => {
+  		let index = this.state.index;
+  		if (index===(CardsData.length -1)) {
+  			index = 0;
+  		} else {
+  			index++;
+  		}
+    	this.setState({index: index});
+    	this.changeCard(index)
+  	}
+
+  	onButtonClickBack = () => {
+  		let index = this.state.index;
+  		if (index===0) {
+  			index = CardsData.length -1;
+  		} else {
+  			index--;
+  		}
+    	this.setState({index: index});
+    	this.changeCard(index)
+  	}
+
+  
 
 	render() {
 		console.log(this.data)
 	    return (
 	      <div className='rowV'>
-	        <MapBox data={this.state.data}/>
-	        <Card  onButtonClick={this.onButtonClick} />
+	        <MapBox card={this.state.card}/>
+	        <Card  name ={this.state.card.name} onButtonClickNext={this.onButtonClickNext} onButtonClickBack={this.onButtonClickBack} />
 	      </div>
 	    );
   	}
