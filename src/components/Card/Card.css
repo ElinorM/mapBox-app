@@ -1,5 +1,111 @@
+.container {
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  width:35vw;
+  display: flex;
+  padding: 20px;
+  background: #222626;
+}
+
+#cardInfo {
+	display: flex;
+	justify-content: space-between;
+  	flex-direction: column;
+}
+
+#cardNumber {
+	width: 314px;
+	height: 34px;
+	font-family: FiraSans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 34px;
+	color: #6FCF97;
+}
+
+#title {
+	font-family: FiraSans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 27px;
+	line-height: 34px;
+	color: #BDC7C7;
+	margin-bottom:20px;
+}
+
+.text {
+	font-family: FiraSans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 150%;
+	margin-bottom: 20px;
+/* or 27px */
+	color: #A7B9B9;
+}
+
+#imgPlaceHolder {
+	background: #000000;
+	height: 200px;
+}
+.buttons-container {
+	position: relative;
+}
 .row {
 	display:flex; 
 	flex-direction:row;
 	justify-content: space-between;
+
+}
+
+button {
+	border: 1px solid #DCE2E3;
+	box-sizing: border-box;
+	border-radius: 50%;
+}
+
+.button {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #DCE2E3;
+	box-sizing: border-box;
+	border-radius: 50%;
+	position: relative;
+}
+
+.arrowBack {
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%) rotate(90deg);
+	width: 12px;
+	height: 17px;
+}
+
+.arrowNext {
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%) rotate(270deg);
+	width: 12px;
+	height: 17px;
+}
+
+ 
+.slide-enter {
+  transform: translateX(0%);
+}
+.slide-enter-active {
+  transform: translateX(100%);
+  transition: transform 1000ms ease-in-out;
+}
+
+.slide-exit {
+  transform: translateX(0%);
+}
+.slide-exit-active {
+  transform: translateX(100%);
+  transition: transform 1000ms ease-in-out;
 }

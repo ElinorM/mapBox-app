@@ -1,10 +1,8 @@
 [
 	{
-		"name": "Card1",
-		"fillPaint": {
-  			"fill-color": "red",
-  			"fill-opacity": 0.5
-		},
+		"title": "Card 1",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+		"img": "https:\/\/www.telegraph.co.uk/content/dam/news/2019/03/23/TELEMMGLPICT000192221146_trans_NvBQzQNjv4BqpjgUWii3Gg7btOfu_iyOCUQeS2AxxEXRTxxhM0O9vD0.jpeg?imwidth=1400",
 		"data": {
 		  "type": "FeatureCollection",
 		  "features": [
@@ -43,11 +41,8 @@
 		}
 	},
 	{
-		"name": "Card2",
-		"fillPaint": {
-  			"fill-color": "white",
-  			"fill-opacity": 0.5
-		},
+		"title": "Card 2",
+		"text": "this is an example text for card number 2",
 		"data": {
 		  "type": "FeatureCollection",
 		  "features": [
@@ -80,5 +75,75 @@
 		    }
 		  ]
 		}
+	},
+	{
+		"title": "Card 3",
+		"data": {
+		  "type": "FeatureCollection",
+		  "features": [
+		    {
+		      "type": "Feature",
+		      "properties": {},
+		      "geometry": {
+		        "type": "LineString",
+		        "coordinates": [
+		          [
+		            34.77267265319824,
+		            32.08519254738235
+		          ],
+		          [
+		            34.7801399230957,
+		            32.08155643291284
+		          ]
+		        ]
+		      }
+		    }
+		  ]
+		}
+	},
+	{
+		"title": "Card 4",
+		"data": {
+		  "type": "FeatureCollection",
+		  "features": [
+		    {
+		      "type": "Feature",
+		      "properties": {},
+		      "geometry": {
+		        "type": "Point",
+		        "coordinates": [
+		          34.79039669036865,
+		          32.08973748703451
+		        ]
+		      }
+		    }
+		  ]
+		}
+	}, 
+	{
+		"title": "Card 5",
+		"data": {
+		  "type": "FeatureCollection",
+		  "features": [
+		    {
+		      "type": "Feature",
+		      "properties": {},
+		      "geometry": {
+		        "type": "LineString",
+		        "coordinates": [
+		          [
+		            34.79121208190917,
+		            32.08650151317809
+		          ],
+		          [
+		            34.79550361633301,
+		            32.08577431227288
+		          ]
+		        ]
+		      }
+		    }
+		  ]
+		}
 	}
+
 ]
